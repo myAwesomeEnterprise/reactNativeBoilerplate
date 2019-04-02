@@ -23,7 +23,7 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to {config('app.name')}!</Text>
+        <Text style={styles.welcome}>Welcome to {config('app.name', 'MyAwesomeEnterpriseApp')}!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
 
