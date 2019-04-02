@@ -1,9 +1,11 @@
+import env from './../env';
+
 export default {
-  name: "React Native",
+  name: env("APP_NAME", "React Native"),
 
-  env: "Production",
+  env: env("APP_ENV", "Production"),
 
-  debug: false,
+  debug: env("APP_DEBUG", false),
 
   timezone: "UTC",
 
