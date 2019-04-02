@@ -1,3 +1,5 @@
+import env from './../env';
+
 export default {
-  baseUrl: "http://localhost"
+  baseUrl: env("BASE_URL", "http://localhost"),
 };
