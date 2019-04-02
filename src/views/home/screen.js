@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, Button, Text, TextInput, View} from 'react-native';
 
+import config from './../../config';
 import styles from './styles.js';
 
 const instructions = Platform.select({
@@ -22,7 +23,7 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
+        <Text style={styles.welcome}>Welcome to {config('app.name')}!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
 
