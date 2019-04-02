@@ -12,6 +12,7 @@ and redux persist. Latest version of react-navigation.
 * [Redux Persist](https://github.com/rt2zz/redux-persist/)
 * [React Navigation](https://reactnavigation.org/)
 * [React Native Gesture Handler](https://github.com/kmagiera/react-native-gesture-handler)
+* [Axios](https://github.com/axios/axios)
 * [Jest](https://facebook.github.io/jest/)
 
 ## Prerequisites
