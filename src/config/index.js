@@ -1,13 +1,15 @@
 import app from './app';
 import request from './request';
 
+const files = {
+  app,
+  request,
+};
+
 function config(path) {
   const $ = path.split('.');
-  const conf = {
-    app, request,
-  };
 
-  return search($, conf);
+  return search($, files);
 };
 
 function search($, conf) {
