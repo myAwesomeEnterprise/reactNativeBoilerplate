@@ -6,11 +6,11 @@ const files = {
   request,
 };
 
-function config(path) {
+function config(path, defaultValue) {
   const $ = path.split('.');
 
-  return search($, files);
-};
+  return search($, files) || defaultValue;
+}
 
 function search($, conf) {
   const key = $.shift() || null;
