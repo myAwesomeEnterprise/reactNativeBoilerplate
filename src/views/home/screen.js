@@ -17,12 +17,6 @@ export default class Home extends Component {
     this.state = {
       name: 'world'
     };
-
-    this.pressHandler = this.pressHandler.bind(this);
-  }
-
-  pressHandler() {
-    this.props.sayHi({name: this.state.name});
   }
 
   render() {
@@ -31,15 +25,16 @@ export default class Home extends Component {
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <View>
-          <TextInput
-            style={styles.textInput}
-            value={this.state.name}
-            onChangeText={name => this.setState({name})}
-          />
-          <Button onPress={this.pressHandler} title="Say hi!">Say hi!</Button>
-          <Text style={styles.hi}>Hello {this.props.name}!</Text>
-        </View>
+
+        <TextInput
+          style={styles.textInput}
+          value={this.state.name}
+          onChangeText={name => this.setState({name})}
+        />
+        <Button title="Say hi!" onPress={() => this.props.sayHi({name: this.state.name})} />
+        <Text style={styles.hi}>Hello {this.props.name}!</Text>
+
+        <Button title="Go to About" onPress={() => this.props.navigation.navigate('About')} />
       </View>
     );
   }
