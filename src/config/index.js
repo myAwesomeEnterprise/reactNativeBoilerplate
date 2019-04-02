@@ -6,7 +6,7 @@ const files = {
   request,
 };
 
-function config(path, defaultValue=null) {
+function config(path, defaultValue = null) {
   const $ = path.split('.');
 
   return search($, files) || defaultValue;
